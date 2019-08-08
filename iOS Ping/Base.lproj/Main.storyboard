@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Ping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IP Or Host Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HK1-sJ-JB9">
+                                <rect key="frame" x="20" y="57" width="326" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CFS-ke-nrP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="apT-ax-Xln">
+                                <rect key="frame" x="20" y="95" width="374" height="355"/>
+                                <color key="backgroundColor" white="0.79842679790000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="355" id="mBM-DQ-ras"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBc-cb-4VP">
+                                <rect key="frame" x="363" y="57" width="31" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mnE-gj-iAC"/>
+                                    <constraint firstAttribute="width" constant="31" id="z7C-ct-n60"/>
+                                </constraints>
+                                <state key="normal" title="Ping"/>
+                                <connections>
+                                    <action selector="ping:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R9v-mq-7bs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="apT-ax-Xln" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="N0l-WC-hUq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="apT-ax-Xln" secondAttribute="trailing" constant="20" id="Rwc-SB-6Ki"/>
+                            <constraint firstItem="HK1-sJ-JB9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fZM-FP-zAJ"/>
+                            <constraint firstItem="pBc-cb-4VP" firstAttribute="leading" secondItem="HK1-sJ-JB9" secondAttribute="trailing" constant="17" id="gvZ-tJ-xqU"/>
+                            <constraint firstItem="HK1-sJ-JB9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="koC-qW-d2Q"/>
+                            <constraint firstItem="pBc-cb-4VP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="rXd-Xk-tb8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pBc-cb-4VP" secondAttribute="trailing" constant="20" id="wVC-ZX-0vG"/>
+                            <constraint firstItem="apT-ax-Xln" firstAttribute="top" secondItem="HK1-sJ-JB9" secondAttribute="bottom" constant="8" id="wn6-Yu-fVR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="hostField" destination="HK1-sJ-JB9" id="R7h-fj-TQm"/>
+                        <outlet property="resultView" destination="apT-ax-Xln" id="jWW-SW-scB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+</document>
